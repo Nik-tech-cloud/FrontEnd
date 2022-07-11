@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Lato&display=swap');
+    </style>
+    <link rel="stylesheet" href="./style-nav.css">
+    <link rel="stylesheet" href="./style-store.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Assignment 6</title>
+</head>
+
+<body>
+    <!-- Mega menu -->
+    <!-- se odpre čez vso vsebino in je hkrati sticky  -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Nik'sPage</a></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <a href="#">DropDown</a>
+                    <ul class="drop-menu">
+                        <li><a href="#">Look</a></li>
+                        <li><a href="#">at</a></li>
+                        <li><a href="#">the</a></li>
+                        <li><a href="#">Mega</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mega</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row" id="image">
+                                <img src="./images/1.jpeg" alt="me and the motorcycle">
+                            </div>
+                            <div class="row">
+                                <header>I am</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Paraglider</a></li>
+                                    <li><a href="#">Biker</a></li>
+                                    <li><a href="#">Gamer</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Skills</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Coding</a></li>
+                                    <li><a href="#">Flying</a></li>
+                                    <li><a href="#">Bench 140</a></li>
+                                    <li><a href="#">DronePilot</a></li>
+                                </ul>
+                            </div>
+                            <div class="row" id="other">
+                                <header>Other</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Fitness</a></li>
+                                    <li><a href="#">Ilustrate</a></li>
+                                    <li><a href="#">Video Editing</a></li>
+                                    <li><a href="#">Photo Editing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="site">
+        <!-- Banner slider -->
+        <!-- using bootstrap 5 -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./images/2.jpeg" alt="First slide">
+                    <div class="carousel-caption ">
+                        <h5>This is baby doggo</h5>
+                        <p>Order one like this now!!! And get one free!!</p>
+                        <a href="#" class="btn btn-lg btn-primary">I want one</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/3.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/4.jpeg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- List of dummy products -->
+        <!-- Mobile first design, infinite scroll s simuliranimi ajax requsti in responsi, en produktni filter ki vedno vrne 4 izdelke ajax request response -->
+        <h1>My store</h1>
+        <div class="store-wrapper">
+            <div class="search">
+                <input type="search" name="srch" id="srch">
+                <button type="button" class="btn btn-lg btn-primary" onclick="findProduct()">FIND </button>
+            </div>
+            <div class="product-wrapper" id="prod_wrapper">
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+                <div class="product-container">
+                    <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+                    <header><b>DoggoCam</b></header>
+                    <p>Your favorite dog camera for only</p>
+                    <p><b>9.99$</b></p>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="products.html" class="next">Next</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

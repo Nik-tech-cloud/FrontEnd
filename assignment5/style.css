@@ -1,0 +1,15 @@
+div#element1 {
+    width: 80vw;
+    height:80vh;
+    background-color: cyan;
+}
+div#element2 {
+    width: 50vw;
+    height:50vh;
+    background-color:deeppink;
+}
+div#element3 {
+    width: 30vw;
+    height:30vh;
+    background-color:black;
+}

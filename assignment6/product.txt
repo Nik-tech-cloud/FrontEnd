@@ -1,0 +1,24 @@
+    <div class="product-container">
+        <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+        <header><b>DoggoCam</b></header>
+        <p>Your favorite dog camera for only</p>
+        <p><b>9.99$</b></p>
+    </div>
+    <div class="product-container">
+        <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+        <header><b>DoggoCam</b></header>
+        <p>Your favorite dog camera for only</p>
+        <p><b>9.99$</b></p>
+    </div>
+    <div class="product-container">
+        <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+        <header><b>DoggoCam</b></header>
+        <p>Your favorite dog camera for only</p>
+        <p><b>9.99$</b></p>
+    </div>
+    <div class="product-container">
+        <img src="./images/5.jpeg" alt="doggo camera" class="tumbnail">
+        <header><b>DoggoCam</b></header>
+        <p>Your favorite dog camera for only</p>
+        <p><b>9.99$</b></p>
+    </div>
